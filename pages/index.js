@@ -5,11 +5,9 @@ import imagen3 from "../public/images/3.jpg";
 import imagen4 from "../public/images/4.jpg";
 
 // aqui ponemos el loader con la url base de la imagen
-{
-  /* https://notife.com/wp-content/uploads/2015/02/pappo.jpg */
-}
+// https://images.pexels.com/photos/13327519/pexels-photo-13327519.jpeg
 const myLoader = ({ src, width, quality }) => {
-  return `https://notife.com/wp-content/uploads/2015/02/${src}?s=${width}`;
+  return `https://images.pexels.com/photos/13327519/${src}?s=${width}`;
 };
 
 export default function Home() {
@@ -80,12 +78,12 @@ export default function Home() {
         </div>
 
         {/* utilizando un cargador personalizado de dicha url */}
-        {/* https://notife.com/wp-content/uploads/2015/02/pappo.jpg */}
+        {/* https://images.pexels.com/photos/13327519/pexels-photo-13327519.jpeg */}
         {/* quality lleva un valor entre 1 y 100 */}
         {/* priority={true} quiere decir que no va a utilizar lazy-loading y se va a precargar mucho antes */}
         <Image
           loader={myLoader}
-          src="pappo.jpg"
+          src="pexels-photo-13327519.jpeg"
           width={5184 / 10}
           height={3888 / 10}
           quality={80}
